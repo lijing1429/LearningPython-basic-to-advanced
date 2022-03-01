@@ -12,11 +12,12 @@ Here are the topics that this practice will cover:
 
 - **For people**: python beginner 
 - **Python IDE**: Visual Studio
-- **Python IDE**
+  
 
 ## **Learning plans**
 
 Coming Soon!
+
 
 ## **Sessions**
 
@@ -35,3 +36,7 @@ This session is to use different python excises and show how to improve the code
 ## **How to use?**
 
 You can go through the folders in order. The very important thing is **Practing**.
+
+## **Reference**
+
+> Book: Learning Python (5th Edition)

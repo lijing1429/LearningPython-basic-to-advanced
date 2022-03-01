@@ -23,7 +23,7 @@ Coming Soon!
 
 ### **Basic concepts**
 
-This session is to let you know about the basic concepts, statements, syntax etc.
+[This session](https://github.com/lijing1429/LearningPython-basic-to-advanced/tree/main/1%20Basic%20concepts) is to let you know about the basic concepts, statements, syntax etc.
 
 ### **Advanced topics**
 

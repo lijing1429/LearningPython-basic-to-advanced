@@ -86,3 +86,4 @@ Never use the single character below as variable names. ```l``` (for ```love```)
 - access items by the index number : ```tuple1[1]``` , ```tuple1[2:5]``` , ```tuple1[:5]``` , ```tuple1[2:]```
 - change items by coverting into a list
 - return many items in function: automatically create a tuple
+- unpacking tuples :  ```(green, yellow, red) = tuple1``` , ```(green, yellow, *red) = tuple1``` , ```(green, *tropic, red) = tuple1``` (* means the left )

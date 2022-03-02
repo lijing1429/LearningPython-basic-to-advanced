@@ -8,7 +8,8 @@ The aim of this folder is to introduce all the basic concepts in python.
 
 - **Same Indentation** in codes: 'Tab' or 'two blankspace'
 
-## **Name rules and conventions**:
+### **Name rules and conventions**:
+
 - **Syntax**: (underscore or letter) + (any number of letters, digits, or underscores)
 
 - **Case matters**: ```A``` is not the same with ```a```
@@ -41,8 +42,30 @@ Never use the single character below as variable names. ```l``` (for ```love```)
 | Begin with two underscores | ```__X``` | Used only to avoid name conflicts with attributes in classes designed to be subclassed | *Localized attributes* to classes. |
 | Just a single underscore | ```_``` | use to express *Not using variables* |
 
+### **Built-in Data type**:
 
+> ```type()``` to find out the variable's data type.
 
+| Categories  | Type |  Examples |
+| ------------- | ----------- | ----------- |
+| Text Type | ```str``` | ```x = "Hello World"``` | 
+| Numeric Types | ```int```, ```float```, ```complex``` | ```x = 1``` , ```x = 1.22``` , ```x = 1+2j```| 
+| Sequence Types | ```list``` , ```tuple```, ```range``` | ```x = [1,2,'hello']``` , ```x = (1,2,'hello')``` , ```x = range(6)```| 
+| Mapping Type | ```dict``` | ```x = {"name" : "John", "age" : 36}``` | 
+| Set Types | ```set``` , ```frozenset``` | ```x = {"apple", "banana", "cherry"}``` , ```x = frozenset({"apple", "banana", "cherry"})``` | 
+| Boolean Type | ```bool``` | ```x = True``` | 
+| Binary Types | ```bytes``` , ```bytearray``` , ```memoryview```| ```x = b"Hello"``` , ```x = bytearray(5)``` , ```x = memoryview(bytes(5))```| 
 
+> ```str```
 
+- Slicing : ```a[2:5]``` , ```a[:5]```, ```a[2:]``` , ```a[-5:-2]```
+- Modify : ```a.upper()``` , ```a.lower()``` , ```a.strip()``` , ```a.replace("H", "J")``` , ```a.split(",")```
+- Concatenation : ```c = a+b```
+- Format :  ```f'My name is {a}' ```
 
+> Collections of data : ```list``` , ```tuple``` , ```set``` , ```dict```
+
+- ```list``` : ordered (indexed) ,  changeable, allow duplicate values
+- ```tuple``` : ordered (indexed) ,  **unchangeable**, allow duplicate values
+- ```set``` : **unordered (unindexed)** , **unchangeable**, **do not allow duplicate values**
+- ```dict``` :  ordered (key to index) , changeable and **do not allow duplicate keys**

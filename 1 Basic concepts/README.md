@@ -65,7 +65,24 @@ Never use the single character below as variable names. ```l``` (for ```love```)
 
 > Collections of data : ```list``` , ```tuple``` , ```set``` , ```dict```
 
-- ```list``` : ordered (indexed) ,  changeable, allow duplicate values
-- ```tuple``` : ordered (indexed) ,  **unchangeable**, allow duplicate values
+- ```list``` : ordered (indexed by position) ,  changeable, allow duplicate values
+- ```tuple``` : ordered (indexed by postion) ,  **unchangeable**, allow duplicate values
 - ```set``` : **unordered (unindexed)** , **unchangeable**, **do not allow duplicate values**
-- ```dict``` :  ordered (key to index) , changeable and **do not allow duplicate keys**
+- ```dict``` :  ordered (indexed by keys) , changeable and **do not allow duplicate keys**
+
+> ```list```
+
+- access items by the index number : ```list1[1]``` , ```list1[2:5]``` , ```list1[:5]``` , ```list1[2:]```
+- change the list items :  ```list1[1] = 'strangers'```
+- add list items : ```append()``` ,  ```insert()``` , ```extend()```
+- remove list items : ```remove()``` , ```pop()``` , ```del``` , ```clear()```
+- List Comprehension:  ```[x for x in fruits if "a" in x]``` , ```[x if x != "banana" else "orange" for x in fruits]```
+- sort lists: ```list1.sort()``` , ```list1.reverse()```
+- join lists: ```list1 + list2``` , ```list1.append(x)``` , ```list1.extend(list2)```
+- notes: use ```copy``` and ```deepcopy``` to assign a new variable, in case changing the value directly to affect other variables.
+
+> ```tuple```
+
+- access items by the index number : ```tuple1[1]``` , ```tuple1[2:5]``` , ```tuple1[:5]``` , ```tuple1[2:]```
+- change items by coverting into a list
+- return many items in function: automatically create a tuple

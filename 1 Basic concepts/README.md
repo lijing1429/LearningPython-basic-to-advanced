@@ -2,13 +2,13 @@
 
 The aim of this folder is to introduce all the basic concepts in python. 
 
-## **Common sense**
+## **1. Common sense**
 
 - **Comments** for Class, Function and Syntax: Explain codes; make codes more readable.
 
 - **Same Indentation** in codes: 'Tab' or 'two blankspace'
 
-### **Name rules and conventions**:
+## **2. Name rules and conventions**
 
 - **Syntax**: (underscore or letter) + (any number of letters, digits, or underscores)
 
@@ -42,7 +42,7 @@ Never use the single character below as variable names. ```l``` (for ```love```)
 | Begin with two underscores | ```__X``` | Used only to avoid name conflicts with attributes in classes designed to be subclassed | *Localized attributes* to classes. |
 | Just a single underscore | ```_``` | use to express *Not using variables* |
 
-### **Built-in Data type**:
+## **3. Built-in Data type**
 
 > ```type()``` to find out the variable's data type.
 
@@ -102,3 +102,20 @@ Never use the single character below as variable names. ```l``` (for ```love```)
 - change items : change values ```thisdict["year"] = 2018``` , ```update``` method
 - remove items : ```pop()``` , ```popitem()```  , ```del``` , ```clear()```
 - notes: use ```copy``` and ```deepcopy``` to assign a new variable, in case changing the value directly to affect other variables.
+
+
+## **4. Operators**
+
+| Operators Type | Description |
+| ----------- | ----------- |
+| Arithmetic Operators | ```+``` , ```-``` , ```*``` , ```/``` , ```%``` , ```**``` , ```//``` |
+| Assignment Operators | ```=``` , ```+=``` , ```-=``` , ```*=``` , ```/=``` , ```%=``` , ```//=``` , ```**=``` , ```&=``` , ```^=``` , ```>>=``` , ```+=```|
+| Comparison Operators | ```==``` , ```!=``` , ```>``` , ```>=``` , ```<``` , ```<=``` , ```(or equal)```|
+| Logical Operators | ```and``` , ```or``` , ```not``` |
+| Identity Operators | ```is``` , ```is not``` |
+| Membership  Operators | ```in``` , ```not in``` |
+| Bitwise  Operators | ```&``` , ```(or)``` , ```^``` , ```~ ``` , ```<<``` , ```>>``` |
+
+## **5. Basic statements**
+
+> ```if ... else...```

@@ -23,3 +23,18 @@ def tuple1():
 
 data1 = tuple1()
 print(type(data1))
+
+# 4. if else
+a = 3
+b = 6
+# way 1 to express
+if a ==b:
+    print('a equal to b')
+elif a>=b:
+    print('a greater than b')
+else:
+    print('a lower than b')
+
+# way 2 to express
+print('a equal to b') if a == b else print('a greater than b') if a>=b else print('a lower than b')
+

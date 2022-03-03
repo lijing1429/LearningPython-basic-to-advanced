@@ -86,4 +86,19 @@ Never use the single character below as variable names. ```l``` (for ```love```)
 - access items by the index number : ```tuple1[1]``` , ```tuple1[2:5]``` , ```tuple1[:5]``` , ```tuple1[2:]```
 - change items by coverting into a list
 - return many items in function: automatically create a tuple
-- unpacking tuples :  ```(green, yellow, red) = tuple1``` , ```(green, yellow, *red) = tuple1``` , ```(green, *tropic, red) = tuple1``` (* means the left )
+- unpacking tuples :  ```(green, yellow, red) = tuple1``` , ```(green, yellow, *red) = tuple1``` , ```(green, *tropic, red) = tuple1``` (* means the left values will be assigned to this one)
+- join tuples : ```tuple1 + tuple2``` , ```fruits * 2```
+
+> ```set```
+
+- access items: only by ```for``` loop. **Cannot** referring by index or key.
+- add items :  one item - ```add()``` , any object - ```update()```
+- remove set items : ```remove()``` , ```discard()``` , ```pop()``` , ```clear()``` , ```del()```
+- join sets : ```union()``` , ```update()```
+
+> ```dict```
+
+- access items : by key name ```thisdict["model"]``` , ```get()``` , get keys ```thisdict.keys()``` , get values ```thisdict.values()``` , get all items ```thisdict.items()```
+- change items : change values ```thisdict["year"] = 2018``` , ```update``` method
+- remove items : ```pop()``` , ```popitem()```  , ```del``` , ```clear()```
+- notes: use ```copy``` and ```deepcopy``` to assign a new variable, in case changing the value directly to affect other variables.

@@ -119,3 +119,24 @@ Never use the single character below as variable names. ```l``` (for ```love```)
 ## **5. Basic statements**
 
 > ```if ... else...```
+
+- ```pass``` , ```return```
+
+> ```while``` loop 
+
+- ```continue``` , ```break``` , ```return``` , ```pass```
+- you can use ```else``` if you want
+
+> ```for``` loop 
+
+- ```continue``` , ```break``` , ```return``` , ```pass```
+- you can use ```else``` if you want
+
+## **6. Functions**
+
+> ```def``` 
+- Arbitrary Arguments : ```*args```
+- Arbitrary Keyword Arguments : ```**kwargs``` 
+  
+> ```lambda```
+- Syntax : ```lambda arguments : expression```

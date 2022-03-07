@@ -7,6 +7,7 @@ The aim of this folder is to introduce all the basic concepts in python.
 - **Comments** for Class, Function and Syntax: Explain codes; make codes more readable.
 
 - **Same Indentation** in codes: 'Tab' or 'two blankspace'
+- **Global variables** inside function or class: avoid to use.
 
 ## **2. Name rules and conventions**
 
@@ -110,11 +111,11 @@ Never use the single character below as variable names. ```l``` (for ```love```)
 | ----------- | ----------- |
 | Arithmetic Operators | ```+``` , ```-``` , ```*``` , ```/``` , ```%``` , ```**``` , ```//``` |
 | Assignment Operators | ```=``` , ```+=``` , ```-=``` , ```*=``` , ```/=``` , ```%=``` , ```//=``` , ```**=``` , ```&=``` , ```^=``` , ```>>=``` , ```+=```|
-| Comparison Operators | ```==``` , ```!=``` , ```>``` , ```>=``` , ```<``` , ```<=``` , ```(or equal)```|
+| Comparison Operators | ```==``` , ```!=``` , ```>``` , ```>=``` , ```<``` , ```<=``` , ```\|=```||
 | Logical Operators | ```and``` , ```or``` , ```not``` |
 | Identity Operators | ```is``` , ```is not``` |
 | Membership  Operators | ```in``` , ```not in``` |
-| Bitwise  Operators | ```&``` , ```(or)``` , ```^``` , ```~ ``` , ```<<``` , ```>>``` |
+| Bitwise  Operators | ```&``` , ```\|``` , ```^``` , ```~ ``` , ```<<``` , ```>>``` |
 
 ## **5. Basic statements**
 
@@ -140,3 +141,21 @@ Never use the single character below as variable names. ```l``` (for ```love```)
   
 > ```lambda```
 - Syntax : ```lambda arguments : expression```
+
+> ```class/object```
+- Syntax : ```class Person:```
+-  ```__init__()``` :**all the class has this function**; executed when the class is being initiated; **assign values** to object properties
+-  ```self``` : a reference to the current instance of the class ; It does not have to be named self , you can call it whatever you like.
+  
+> ```Child Class``` : 
+- Syntax : ```class Student(Person):```
+-  ```super()``` : make the child class inherit all the methods and properties from its parent
+-  method in the child class has same name of parent class :  the inheritance of the parent method will be overridden.
+
+## **7. Modules**
+- ```import...(as)...``` ; ```from...import...```  :  the .py files
+-  ```dir()``` : list all the function names (or variable names) in a module
+
+## **8. Other information**
+- **Regular expression** : ```re```
+- **```try...except...else...finally...```** : catch all the errors **```Exception```**

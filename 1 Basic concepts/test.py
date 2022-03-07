@@ -38,3 +38,26 @@ else:
 # way 2 to express
 print('a equal to b') if a == b else print('a greater than b') if a>=b else print('a lower than b')
 
+# 5. child class
+class Person:
+    '''parent class'''
+    def __init__(self, fname, lname):
+        self.fname = fname
+        self.lname = lname
+
+class Student(Person):
+    '''child class'''
+    def __init__(self, fname, lname):
+        # way 1:  to inherit the methods and properties from its parent
+        Person.__init__(self, fname, lname)
+        # way 2:  to inherit the methods and properties from its parent
+        super().__init__(fname, lname)
+
+# 6. try except
+'''catch all the errors''' 
+try:
+    path = r'c:/123.txt'
+    with open(path) as f:
+        print(f)
+except Exception as errorName:
+    print(errorName)

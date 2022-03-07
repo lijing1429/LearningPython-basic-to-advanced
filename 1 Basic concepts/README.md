@@ -159,3 +159,5 @@ Never use the single character below as variable names. ```l``` (for ```love```)
 ## **8. Other information**
 - **Regular expression** : ```re```
 - **```try...except...else...finally...```** : catch all the errors **```Exception```**
+- input data: ```input()```
+- ```format``` 

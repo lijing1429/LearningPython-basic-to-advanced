@@ -6,8 +6,8 @@ The aim of this folder is to talk about advanced topics and frequently used pack
 > Create an array, and check how many dimensions
 - `arr = np.array([1, 2, 3, 4], ndmin=5)`
 - `arr = np.array([1, 2, 3, 4])`
-- `a.ndim`
-- `a.shape` #detailed information of this array
+- `arr.ndim`
+- `arr.shape`  #detailed information of this array
 
 > Array index
 - `arr[1,1,1]`  # if there are three dimensions in  this array

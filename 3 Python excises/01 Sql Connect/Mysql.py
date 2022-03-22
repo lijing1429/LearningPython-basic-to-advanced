@@ -1,32 +1,53 @@
-import mysql.connector
+import os
+import pandas as pd
+import pymysql
+from sqlalchemy import create_engine
 
-mydb = mysql.connector.connect(
-  host="localhost",
-  user="root",
-  password="123456"
-  # ,database="mevaluation"
-)
+# read testdata into dataframe
+for root, dirs, files in os.walk(os.getcwd()):
+    for name in files:
+        if name == 'testdata.xlsx':   #the specific file is testdata.xlsx
+            datapath = os.path.abspath(os.path.join(root, name))
 
-mycursor = mydb.cursor()
-'''1. show your database / tables in your local devices'''
-# mycursor.execute("SHOW DATABASES")
-# mycursor.execute("SHOW TABLES")
-# for x in mycursor:
-#   print(x)
+testdata = pd.read_excel(datapath)
 
-'''2. create table in your database'''
-# mycursor.execute("CREATE TABLE mevaluation.test (name VARCHAR(255) PRIMARY KEY, address VARCHAR(255))")
+# connect to the database
+connection = pymysql.connect(host='localhost',
+                         user='root',
+                         password="123456",
+                         db='mevaluation',
+                         charset='utf8mb4')
 
-'''3. insert data into table (use "commit" at the end of statement, otherwise the values won't insert)'''
-# mycursor.execute("INSERT INTO mevaluation.module_result VALUES(%s, %s, %s)", ("testpy", "789465485",int(90)))
+#create cursor
+mycursor=connection.cursor()
 
-# sql = "INSERT INTO mevaluation.module_result (SPRcode,candidaNumber,studentMarks) VALUES (%s, %s, %s)"
-# val = ('testpy1', '789465485',90)
-# mycursor.execute(sql, val)
+# create engine 
+db_data = 'mysql+pymysql://' + 'root' + ':' + '123456' + '@' + 'localhost' + ':3306/' \
+       + 'mevaluation' + '?charset=utf8mb4'
+engine = create_engine(db_data)
 
-# mydb.commit()
+'''way 1 : import dataframe into mysql database'''
+mycursor.execute("drop TABLE users;")
+testdata.to_sql('users', con=engine, index=False)
 
-'''4. manipulate table in your database'''
+'''way 2 : insert dataframe into the existed table (fastest)'''
+mycursor.execute("drop TABLE testdata;")
+mycursor.execute("CREATE TABLE testdata (id int PRIMARY KEY, name VARCHAR(255), runtime TIMESTAMP)")
+testdata.to_sql('testdata', engine, if_exists='append', index=False)   
 
-# mycursor.execute("insert into mevaluation.module_result (SPRcode,candidaNumber,studentMarks) values ('123458', '789465485',80)")
-# mydb.commit()
+'''way 3 : Insert DataFrame records one by one'''
+cols = ",".join([str(i) for i in testdata.columns.tolist()])
+for i,row in testdata.iterrows():
+    sql = "INSERT INTO users (" +cols + ") VALUES (" + "%s,"*(len(row)-1) + "%s)"
+    mycursor.execute(sql, tuple(row))
+    # the connection is not autocommitted by default, so we must commit to save our changes
+    connection.commit()
+
+# Fetch all the records
+mycursor.execute('select * from testdata')
+result = mycursor.fetchall()
+for i in result:
+    print(i)
+
+engine.dispose()
+connection.close()

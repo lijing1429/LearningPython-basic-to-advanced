@@ -6,6 +6,15 @@ for root, dirs, files in os.walk(workpath):
         if name == 'testdata.xlsx':   #the specific file is testdata.xlsx
             print(os.path.abspath(os.path.join(root, name)))
 
+'''2. get the current py file's filepath'''
+print(os.path.dirname(os.path.abspath(__file__)))
+
+'''3. go through all files in the given directory'''
+for file in os.listdir(workpath):
+    filename = os.fsdecode(file)
+    print(os.path.join(workpath, filename))
+
+
 '''2. write sql : insert dataframe records one by one'''
 import pandas as pd
 df = pd.DataFrame({'num_legs': [2, 4, 8, 0],

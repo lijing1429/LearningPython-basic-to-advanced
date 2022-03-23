@@ -1,7 +1,10 @@
 -- '''database manipulate'''
-show databases;
-/* create database asis; */
-/* create database brightspace; */
+/* show databases; */
+/* create database Hud_ASIS;
+create database Hud_BS;
+create database Hud_Plan; */
+/* drop database brightspace;
+drop database asis; */
 
 
 
@@ -16,8 +19,8 @@ show tables in mevaluation; */
 /* select * from mevaluation.module_result where studentMarks in (select max(studentMarks) from mevaluation.module_result); */
 /* select * from mevaluation.module_result where candidaNumber is not null; */
 /* select * from mevaluation.module_result where studentMarks limit 3; */
-/* select * from mevaluation.users;
-select * from mevaluation.testdata; */
+/* /* select * from mevaluation.users; */
+select * from Hud_BS.users; 
 /* CREATE PROCEDURE mevaluation.Moduleresult @SPRcode nvarchar(30)
 AS
 SELECT * FROM mevaluation.module_result WHERE SPRcode = @SPRcode

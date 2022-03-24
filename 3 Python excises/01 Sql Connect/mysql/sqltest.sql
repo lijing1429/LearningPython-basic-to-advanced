@@ -29,8 +29,8 @@ show tables in mevaluation; */
 ALTER TABLE bs_login MODIFY uas_SCE_Course_Code varchar(255); */
 
 
-ALTER TABLE Hud_BS.bs_login ADD PRIMARY KEY(u_UserID,uas_SCE_Course_Code, startime); */
-commit; 
+/* ALTER TABLE Hud_BS.bs_login ADD PRIMARY KEY(u_UserID,uas_SCE_Course_Code, startime); */
+/* commit;  */ 
 /* ALTER TABLE Hud_BS.users MODIFY startime DATE;
 commit; */
 /* CREATE PROCEDURE mevaluation.Moduleresult @SPRcode nvarchar(30)

@@ -15,7 +15,7 @@ The aim of this folder is to use some excises to improve your python skills.
 - **Python package** : pandas, pymysql, sqlalchemy
 - **Aims**: scrapping the specific tables from different format files (word, pdf, txt)
 - **Challeges**: how to scrap data and keep the same format loading into excel
-- **Quick link**: [word](https://github.com/lijing1429/LearningPython-basic-to-advanced/tree/main/3%20Python%20excises/02%20file%20scraping/word) ; [pdf]()
+- **Quick link**: [word](https://github.com/lijing1429/LearningPython-basic-to-advanced/tree/main/3%20Python%20excises/02%20file%20scraping/word) ; [pdf](https://github.com/lijing1429/LearningPython-basic-to-advanced/tree/main/3%20Python%20excises/02%20file%20scraping/pdf)
 
 
  
